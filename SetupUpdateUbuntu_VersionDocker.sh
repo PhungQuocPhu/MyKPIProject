@@ -51,6 +51,7 @@ echo "|------------------------|"
 echo "|==== Install Web2Py ====|"
 echo "|------------------------|"
 cd /home/www-data
+mkdir web2py
 #mkdir www-data
 #cd www-data
 #svn co https://repo.soxes.ch/svn/mykpi/root/src/web2py
