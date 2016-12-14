@@ -43,18 +43,18 @@ sh -c 'openssl genrsa 1024 > /etc/apache2/ssl/self_signed.key'
 chmod 400 /etc/apache2/ssl/self_signed.key
 sh -c 'openssl req -new -x509 -nodes -sha1 -days 365 -key /etc/apache2/ssl/self_signed.key > /etc/apache2/ssl/self_signed.cert'
 sh -c 'sudo openssl x509 -noout -fingerprint -text < /etc/apache2/ssl/self_signed.cert > /etc/apache2/ssl/self_signed.info'
-#echo "|---------------------|"
-#echo "|==== Install SVN ====|"
-#echo "|---------------------|"
-#apt-get -y install subversion
+echo "|---------------------|"
+echo "|==== Install SVN ====|"
+echo "|---------------------|"
+apt-get -y install subversion
 echo "|------------------------|"
 echo "|==== Install Web2Py ====|"
 echo "|------------------------|"
-cd /home/www-data
-mkdir web2py
-#mkdir www-data
-#cd www-data
-#svn co https://repo.soxes.ch/svn/mykpi/root/src/web2py
+cd /home/
+#mkdir web2py
+mkdir www-data
+cd www-data
+svn co https://repo.soxes.ch/svn/mykpi/root/src/web2py
 chown -R www-data:www-data web2py
 echo "|-------------------------------------------|"
 echo "|==== Configure Apache to use mod_wsgi  ====|"
