@@ -102,8 +102,7 @@ WSGIDaemonProcess web2py user=www-data group=www-data
 
   CustomLog /var/log/apache2/ssl-access.log common
   ErrorLog /var/log/apache2/error.log
-</VirtualHost> 
-' > /etc/apache2/sites-available/web2py.conf
+</VirtualHost> ' > /etc/apache2/sites-available/web2py.conf
 sudo rm /etc/apache2/site-enabled/*
 sudo a2ensite web2py
 service apache2 restart
