@@ -50,10 +50,10 @@ apt-get -y install subversion
 echo "|------------------------|"
 echo "|==== Install Web2Py ====|"
 echo "|------------------------|"
-cd /home/
+cd /home/www-data
 #mkdir web2py
-mkdir www-data
-cd www-data
+#mkdir www-data
+#cd www-data
 svn co https://repo.soxes.ch/svn/mykpi/root/src/web2py
 chown -R www-data:www-data web2py
 echo "|-------------------------------------------|"
